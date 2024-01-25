@@ -20,6 +20,9 @@ const authMiddleware = (req,res,next)=>{
     return res.status(403).json({});
    }
 }
+app.get('/',(req,res)=>{
+    res.send("Welcome to Instapay")
+})
 app.post('/register',async (req,res)=>{
      const {userName,password,firstName,lastName} = req.body
      console.log(req.body)
